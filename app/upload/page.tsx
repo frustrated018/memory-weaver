@@ -36,7 +36,7 @@ export default function UploadMemoriesPage() {
               <UploadButton
                 endpoint="imageUploader"
                 onClientUploadComplete={(res) => {
-                  const urls = res.map((file) => file.fileUrl || file.ufsUrl);
+                  const urls = res.map((file) => file.ufsUrl);
                   setImages((prev) => [...prev, ...urls]);
                   toast.success("Upload Completed!");
                 }}
