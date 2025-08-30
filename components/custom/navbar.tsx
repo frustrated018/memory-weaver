@@ -20,7 +20,7 @@ export function Navabar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
         {/* Brand */}
         <Link
-          href="#home"
+          href="/"
           className="font-mono text-base font-bold uppercase tracking-widest text-white md:text-lg"
         >
           Memory Weaver
