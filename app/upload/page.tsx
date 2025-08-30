@@ -5,6 +5,7 @@ import { UploadButton } from "@/utils/uploadthing";
 import Link from "next/link";
 import { toast } from "sonner";
 import { Navabar } from "@/components/custom/navbar";
+import Image from "next/image";
 
 export default function UploadMemoriesPage() {
   const [images, setImages] = useState<string[]>([]);
@@ -56,9 +57,12 @@ export default function UploadMemoriesPage() {
         {images.length > 0 && (
           <section className="mt-10 w-full grid grid-cols-2 md:grid-cols-3 gap-4">
             {images.map((url, idx) => (
-              <img
+              <Image
+              height={1000}
+              width={1000}
                 key={idx}
                 src={url}
+                unoptimized
                 alt={`Memory ${idx}`}
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />

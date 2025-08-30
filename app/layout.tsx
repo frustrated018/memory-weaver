@@ -33,7 +33,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="font-sans bg-black text-white">
+      <body
+        suppressHydrationWarning={true}
+        className="font-sans bg-black text-white"
+      >
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Toaster />
       </body>

@@ -3,6 +3,7 @@
 import { Navabar } from "@/components/custom/navbar";
 import { MemoryImage, memoryImages } from "./memoryImages";
 import { useMemo, useState } from "react";
+import Image from "next/image";
 
 const EMOTIONS = [
   "Nostalgia",
@@ -102,9 +103,12 @@ export default function SearchPage() {
                 key={img.id}
                 className="group overflow-hidden rounded-md border border-white/10 bg-white/5"
               >
-                <img
+                <Image
+                  height={1000}
+                  width={1000}
                   src={img.src}
                   alt={img.alt}
+                  unoptimized
                   className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02] group-hover:opacity-95"
                 />
                 <figcaption className="flex items-center justify-between px-3 py-2 text-xs text-white/70">
